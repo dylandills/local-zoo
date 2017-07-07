@@ -4,19 +4,19 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'app-root',
   template: `
-  <div class= "container">
-    <h1>{{currentProject}}</h1>
-    <h3> Newly Admitted Animals: </h3>
-    <animal-list [childAnimaList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
-    <br>
-    <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishEditing()"></edit-animal>
-    <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
-  </div>
+    <div class="container">
+      <h1>Welcome to Zoboomafoo!</h1>
+      <h3>{{currentProject}}</h3>
+      <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
+      <hr>
+      <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
+      <new-animal (newAnimalSender)="newAnimal($event)"></new-animal>
+    </div>
   `
 })
 
 export class AppComponent {
-  currentProject: string = 'Local Zoo';
+  currentProject: string = 'Come along and see whats new, were doing the thing that animals do!'
 
   selectedAnimal = null;
 
@@ -30,7 +30,7 @@ export class AppComponent {
     this.selectedAnimal = clickedAnimal;
   }
 
-  finishEditing() {
+  finishedEditing() {
     this.selectedAnimal = null;
   }
 
