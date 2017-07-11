@@ -21,7 +21,7 @@ import { Animal } from './animal.model';
     <label>Caretakers Needed: </label>{{currentAnimal.needCare}}<br>
     <label>Sex: </label>{{currentAnimal.sex}}<br>
     <label>One Like: </label>{{currentAnimal.oneLike}}<br>
-    <label>One Dislike: </label>{{currentAnimal.oneDislike}}<br>
+    <label>One Dislike: </label>{{currentAnimal.oneDislike}}<br><br><br>
     <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit Animal!</button></li>
   </ol>
   `

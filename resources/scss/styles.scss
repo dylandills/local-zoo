@@ -1,0 +1,97 @@
+$grass: #3dd28d;
+$snow: #FFF;
+
+/*Global Styling*/
+.container {
+  background-color: $grass;
+
+}
+
+/*Top Bar*/
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+/*Main Content-Global*/
+.content-main {
+  background-color: $snow;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 2em;
+}
+
+/*Main Content-Pipe*/
+select {
+  margin: 2em;
+}
+
+/*Main Content- Animal List*/
+ol{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+li {
+  border: 1px solid black;
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+/*Main Content- Edit Animal/Add Animal Button*/
+button {
+  color: $snow;
+  background: $grass;
+  display: flex;
+  overflow: hidden;
+  margin: auto;
+  padding: 12px 12px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 60ms ease-in-out;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: none;
+  text-transform: capitalize;
+  border: 0 none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  appearance: none;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 160px;
+
+  &:hover {
+    transition: all 60ms ease;
+
+    opacity: .85;
+  }
+
+  &:active {
+    transition: all 60ms ease;
+    opacity: .75;
+  }
+
+  &:focus {
+    outline: 1px dotted #959595;
+    outline-offset: -4px;
+  }
+}
+
+/*Main Content- Add a New Animal*/
+.add-animal {
+  margin: 5em 10em;
+}
+
+/*Footer*/
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}

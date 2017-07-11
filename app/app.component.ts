@@ -5,18 +5,26 @@ import { Animal } from './animal.model';
   selector: 'app-root',
   template: `
     <div class="container">
-      <h1>Welcome to Zoboomafoo!</h1>
-      <h3>{{currentProject}}</h3>
-      <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
-      <hr>
-      <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
-      <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
+      <div class="nav">
+        <h1><img src="resources/img/zoboo.jpg" alt="Zoboomafoo"></h1>
+      </div>
+      <div class="content-main">
+        <div class="animal">
+          <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
+          <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
+        </div>
+        <div class="add-animal">
+          <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
+        </div>
+      </div>
+      <div class="footer">
+        <h3>Animal Junction is the place to be! Thanks for visiting!</h3>
+      </div>
     </div>
   `
 })
 
 export class AppComponent {
-  currentProject: string = 'Come along and see whats new, were doing the thing that animals do!'
 
   selectedAnimal = null;
 
